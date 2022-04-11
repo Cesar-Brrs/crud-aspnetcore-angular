@@ -1,0 +1,16 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 500px;
+  border-radius: 16px;
+}
+
+.login-form {
+  width: 340px;
+  margin: 50px auto;
+}

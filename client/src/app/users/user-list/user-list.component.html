@@ -1,0 +1,32 @@
+<div class="text-center">
+  <h1>Usuarios</h1>
+</div>
+<div class="table table-responsive">
+  <table class="table table-dark table-borderless">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Usuario</th>
+        <th>Correo</th>
+        <th>Sexo</th>
+        <th>Estatus</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.username }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.gender }}</td>
+        <td *ngIf="user.status === true">Activo</td>
+        <td *ngIf="user.status === false">Inactivo</td>
+        <td>
+          <button type="button" class="btn btn-outline-success btn-sm" (click)="onEdit(user)">Editar</button>
+          <button type="button" class="btn btn-outline-danger btn-sm ms-2" (click)="onDelete(user)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
